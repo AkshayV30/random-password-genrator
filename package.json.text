@@ -1,0 +1,13 @@
+{
+  "name": "pwd-gen",
+  "version": "1.0.0",
+  "description": "Random password genrator",
+  "scripts": {
+    "watch:sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "AkshayV30",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

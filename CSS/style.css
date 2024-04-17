@@ -1,0 +1,103 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+:root {
+  --form-control-color: $form-control-color; }
+
+body {
+  margin: 0;
+  display: flex;
+  font-size: 62.5%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh; }
+
+html {
+  font-family: monospace; }
+
+header {
+  padding: 2.4rem;
+  background: aliceblue; }
+
+h1 {
+  font-size: 2.4rem; }
+
+main {
+  padding: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  /* gap: 1rem; */
+  flex-direction: column; }
+  main .passLength-container,
+  main .numbers-container,
+  main .lowercase-alphabets-container,
+  main .uppercase-alphabets-container,
+  main .special-container {
+    padding: 1.6rem;
+    display: inline-flex;
+    gap: 2rem; }
+    main .passLength-container .option-container,
+    main .numbers-container .option-container,
+    main .lowercase-alphabets-container .option-container,
+    main .uppercase-alphabets-container .option-container,
+    main .special-container .option-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem; }
+
+.pass-container {
+  padding: 2rem;
+  background-color: bisque;
+  border: 2px solid red;
+  border-radius: 10px; }
+  .pass-container .btn-genrate {
+    border: none;
+    background: #acdef1;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2); }
+  .pass-container .btn-genrate:hover {
+    cursor: pointer; }
+  .pass-container .btn-genrate:active {
+    background: orange; }
+
+input[type="radio"] {
+  appearance: none;
+  /* Not removed via appearance  */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  aspect-ratio: 1;
+  border: 0.1em solid #830808;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transform: scale(0);
+    /* transition: 120ms transform ease-in-out; */
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText; }
+  input[type="radio"]:checked::before {
+    transform: scale(1); }
+  input[type="radio"]:not(:checked) + label {
+    color: #777; }
+
+/* input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+} */
+footer {
+  padding: 1.8rem;
+  /* background: rgb(0, 248, 215); */ }

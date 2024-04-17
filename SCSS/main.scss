@@ -1,0 +1,145 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+$form-control-color: rgb(0, 0, 0);
+
+:root {
+  --form-control-color: $form-control-color;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-size: 62.5%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+html {
+  font-family: monospace;
+}
+
+header {
+  padding: 2.4rem;
+  background: aliceblue;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+main {
+  // /* background-color: aquamarine; */
+  padding: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  /* gap: 1rem; */
+  flex-direction: column;
+
+  .passLength-container,
+  .numbers-container,
+  .lowercase-alphabets-container,
+  .uppercase-alphabets-container,
+  .special-container {
+    padding: 1.6rem;
+    display: inline-flex;
+    gap: 2rem;
+
+    .option-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+.pass-container {
+  padding: 2rem;
+  background-color: bisque;
+  border: 2px solid red;
+  border-radius: 10px;
+
+  .btn-genrate {
+    border: none;
+    background: rgb(172, 222, 241);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    // color: rgb(1, 27, 49);
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-genrate:hover {
+    cursor: pointer;
+  }
+  .btn-genrate:active {
+    background: orange;
+  }
+}
+
+input[type="radio"] {
+  appearance: none;
+  /* Not removed via appearance  */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  aspect-ratio: 1;
+  border: 0.1em solid rgb(131, 8, 8);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    width: 0.65em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transform: scale(0);
+    /* transition: 120ms transform ease-in-out; */
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+
+  &:not(:checked) + label {
+    color: #777;
+  }
+
+  // Style for the dot
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 0.5em;
+  //   height: 0.5em;
+  //   border-radius: 50%;
+  //   background-color: #fff;
+  //   box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.3);
+  // }
+
+  // &:checked + label {
+  //   font-weight: bold;
+  //   color: #f00; /* Adjust color as needed */
+  // }
+}
+
+/* input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+} */
+
+footer {
+  padding: 1.8rem;
+  /* background: rgb(0, 248, 215); */
+}
