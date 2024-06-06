@@ -6,10 +6,19 @@
   padding: 0;
 }
 
-$form-control-color: rgb(0, 0, 0);
-
 :root {
-  --form-control-color: $form-control-color;
+  --base-color: #191919;
+  --body-color: white;
+  //
+  --header-background-color: #222222;
+  --header-color: white;
+
+  --output-color: rgb(136, 255, 0);
+  --output-background-color: #050102;
+  --btn-background-color: #750e21;
+  --btn-color: #ffffff;
+  --form-control-color: #bed754;
+  --btn-highlight-color: #e3651d;
 }
 
 body {
@@ -20,6 +29,8 @@ body {
   align-items: center;
   overflow: hidden;
   min-height: 100vh;
+  background: var(--base-color);
+  color: var(--body-color);
 }
 
 html {
@@ -28,7 +39,10 @@ html {
 
 header {
   padding: 2.4rem;
-  background: aliceblue;
+  background: var(--header-background-color);
+  color: var(--header-color);
+  border-radius: 1.2rem;
+  // box-shadow: 1px 1px 1.5px #e3651d;
 }
 
 h1 {
@@ -36,7 +50,6 @@ h1 {
 }
 
 main {
-  // /* background-color: aquamarine; */
   padding: 1rem;
   font-size: 1.6rem;
   display: flex;
@@ -62,23 +75,25 @@ main {
 
 .pass-output {
   padding: 2rem;
-  background-color: rgb(255, 254, 196);
-  border: 2px solid red;
+  background: var(--output-background-color);
+  border: 2px solid #750e21;
   border-radius: 10px;
-  color: #460202;
+  color: var(--output-color);
   letter-spacing: 2px;
   font-size: 2rem;
   text-align: center;
 }
 
 .btn-genrate {
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
   margin: 0 auto;
   max-width: fit-content;
   border: none;
-  background: rgb(172, 222, 241);
+  background: var(--btn-background-color);
   padding: 1rem;
   border-radius: 0.5rem;
-  // color: rgb(1, 27, 49);
+  color: var(--btn-color);
   box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -86,7 +101,7 @@ main {
   cursor: pointer;
 }
 .btn-genrate:active {
-  background: rgb(251, 255, 0);
+  background: var(--btn-highlight-color);
 }
 
 input[type="radio"] {
