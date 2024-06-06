@@ -2,6 +2,8 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 $form-control-color: rgb(0, 0, 0);
@@ -11,7 +13,6 @@ $form-control-color: rgb(0, 0, 0);
 }
 
 body {
-  margin: 0;
   display: flex;
   font-size: 62.5%;
   justify-content: space-around;
@@ -59,27 +60,33 @@ main {
   }
 }
 
-.pass-container {
+.pass-output {
   padding: 2rem;
-  background-color: bisque;
+  background-color: rgb(255, 254, 196);
   border: 2px solid red;
   border-radius: 10px;
+  color: #460202;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+}
 
-  .btn-genrate {
-    border: none;
-    background: rgb(172, 222, 241);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    // color: rgb(1, 27, 49);
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
-  }
+.btn-genrate {
+  margin: 0 auto;
+  max-width: fit-content;
+  border: none;
+  background: rgb(172, 222, 241);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  // color: rgb(1, 27, 49);
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
+}
 
-  .btn-genrate:hover {
-    cursor: pointer;
-  }
-  .btn-genrate:active {
-    background: orange;
-  }
+.btn-genrate:hover {
+  cursor: pointer;
+}
+.btn-genrate:active {
+  background: rgb(251, 255, 0);
 }
 
 input[type="radio"] {
@@ -141,5 +148,34 @@ input[type="radio"] {
 
 footer {
   padding: 1.8rem;
-  /* background: rgb(0, 248, 215); */
+  // background: rgb(0, 248, 215);
+}
+
+/* Define a media query for screens smaller than a certain width, e.g., 768px */
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 1rem; /* Reduce the padding for main content */
+    font-size: 1.2rem;
+
+    .passLength-container,
+    .numbers-container,
+    .lowercase-alphabets-container,
+    .uppercase-alphabets-container,
+    .special-container {
+      padding: 1.2rem;
+      gap: 1.2rem;
+    }
+  }
+  .pass-output {
+    padding: 1rem; /* Reduce the padding for the password container */
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding: 1.2rem; /* Reduce the padding for the header */
+  }
+
+  footer {
+    padding: 1rem; /* Reduce the padding for the footer */
+  }
 }

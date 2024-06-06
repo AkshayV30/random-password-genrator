@@ -4,7 +4,7 @@
   "description": "random password genrator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass:watch": "node-sass --watch ./scss/main.scss ./css/style.css"
   },
   "author": "AkshayV30",
   "license": "ISC",

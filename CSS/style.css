@@ -1,13 +1,14 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 :root {
   --form-control-color: $form-control-color; }
 
 body {
-  margin: 0;
   display: flex;
   font-size: 62.5%;
   justify-content: space-around;
@@ -49,21 +50,30 @@ main {
       align-items: center;
       gap: 1rem; }
 
-.pass-container {
+.pass-output {
   padding: 2rem;
-  background-color: bisque;
+  background-color: #fffec4;
   border: 2px solid red;
-  border-radius: 10px; }
-  .pass-container .btn-genrate {
-    border: none;
-    background: #acdef1;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2); }
-  .pass-container .btn-genrate:hover {
-    cursor: pointer; }
-  .pass-container .btn-genrate:active {
-    background: orange; }
+  border-radius: 10px;
+  color: #460202;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center; }
+
+.btn-genrate {
+  margin: 0 auto;
+  max-width: fit-content;
+  border: none;
+  background: #acdef1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2); }
+
+.btn-genrate:hover {
+  cursor: pointer; }
+
+.btn-genrate:active {
+  background: #fbff00; }
 
 input[type="radio"] {
   appearance: none;
@@ -99,5 +109,28 @@ input[type="radio"] {
   outline-offset: max(2px, 0.15em);
 } */
 footer {
-  padding: 1.8rem;
-  /* background: rgb(0, 248, 215); */ }
+  padding: 1.8rem; }
+
+/* Define a media query for screens smaller than a certain width, e.g., 768px */
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 1rem;
+    /* Reduce the padding for main content */
+    font-size: 1.2rem; }
+    main .passLength-container,
+    main .numbers-container,
+    main .lowercase-alphabets-container,
+    main .uppercase-alphabets-container,
+    main .special-container {
+      padding: 1.2rem;
+      gap: 1.2rem; }
+  .pass-output {
+    padding: 1rem;
+    /* Reduce the padding for the password container */
+    font-size: 1.2rem; }
+  header {
+    padding: 1.2rem;
+    /* Reduce the padding for the header */ }
+  footer {
+    padding: 1rem;
+    /* Reduce the padding for the footer */ } }
