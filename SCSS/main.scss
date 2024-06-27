@@ -9,6 +9,7 @@
 :root {
   --base-color: #191919;
   --body-color: white;
+  --base-background-color-2: rgb(0, 0, 0);
   //
   --header-background-color: #222222;
   --header-color: white;
@@ -27,14 +28,22 @@ body {
   // justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
   overflow: hidden;
-  min-height: 100vh;
+
   background: var(--base-color);
   color: var(--body-color);
 }
 
 html {
   font-family: monospace;
+}
+
+.base-container {
+  background: var(--base-background-color-2);
+  padding: 3.6rem;
+  border-radius: 1rem;
 }
 
 header {
@@ -168,6 +177,9 @@ footer {
 
 /* Define a media query for screens smaller than a certain width, e.g., 768px */
 @media only screen and (max-width: 768px) {
+  body {
+    height: 60vh;
+  }
   main {
     padding: 1rem; /* Reduce the padding for main content */
     font-size: 1.2rem;

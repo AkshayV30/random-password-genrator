@@ -7,172 +7,182 @@
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Random Password Genrator</h1>
-    </header>
+    <div class="base-container">
+      <header>
+        <h1>Random Password Genrator</h1>
+      </header>
 
-    <main>
-      <div class="pass-output">
-        <p id="genrated-pass">--------</p>
-      </div>
+      <main>
+        <div class="pass-output">
+          <p id="genrated-pass">--------</p>
+        </div>
 
-      <div class="passLength-container">
-        <p>Enter Password length (4 - 16)</p>
-        <div class="option-container">
-          <div class="options">
-            <input
-              class="selector passLength"
-              name="length"
-              type="radio"
-              id="passLengthA"
-              data-length="4"
-              checked
-            />
-            <label class="selector-option" for="passLengthA"> 4</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector passLength"
-              name="length"
-              type="radio"
-              id="passLengthB"
-              data-length="6"
-            />
-            <label class="selector-option" for="passLengthB"> 6</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector passLength"
-              name="length"
-              type="radio"
-              id="passLengthC"
-              data-length="6"
-            />
-            <label class="selector-option" for="passLengthC"> 8 </label>
-          </div>
-          <div class="options">
-            <input
-              class="selector passLength"
-              name="length"
-              type="radio"
-              id="passLengthD"
-              data-length="16"
-            />
-            <label class="selector-option" for="passLengthD"> 16</label>
+        <div class="passLength-container">
+          <p>Enter Password length (4 - 16)</p>
+          <div class="option-container">
+            <div class="options">
+              <input
+                class="selector passLength"
+                name="length"
+                type="radio"
+                id="passLengthA"
+                data-length="4"
+                checked
+              />
+              <label class="selector-option" for="passLengthA"> 4</label>
+            </div>
+            <div class="options">
+              <input
+                class="selector passLength"
+                name="length"
+                type="radio"
+                id="passLengthB"
+                data-length="6"
+              />
+              <label class="selector-option" for="passLengthB"> 6</label>
+            </div>
+            <div class="options">
+              <input
+                class="selector passLength"
+                name="length"
+                type="radio"
+                id="passLengthC"
+                data-length="6"
+              />
+              <label class="selector-option" for="passLengthC"> 8 </label>
+            </div>
+            <div class="options">
+              <input
+                class="selector passLength"
+                name="length"
+                type="radio"
+                id="passLengthD"
+                data-length="16"
+              />
+              <label class="selector-option" for="passLengthD"> 16</label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="numbers-container">
-        <p>Include Numbers</p>
-        <div class="option-container">
-          <div class="options">
-            <input
-              class="selector"
-              name="numbers"
-              type="radio"
-              id="numbersY"
-              data-include="true"
-              checked
-            />
-            <label class="selector-option" for="numbersY"> Yes</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector"
-              name="numbers"
-              type="radio"
-              id="numbersN"
-              data-include="false"
-            />
-            <label class="selector-option" for="numbersN"> No</label>
+        <div class="numbers-container">
+          <p>Include Numbers</p>
+          <div class="option-container">
+            <div class="options">
+              <input
+                class="selector"
+                name="numbers"
+                type="radio"
+                id="numbersY"
+                data-include="true"
+                checked
+              />
+              <label class="selector-option" for="numbersY"> Yes</label>
+            </div>
+            <div class="options">
+              <input
+                class="selector"
+                name="numbers"
+                type="radio"
+                id="numbersN"
+                data-include="false"
+              />
+              <label class="selector-option" for="numbersN"> No</label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="lowercase-alphabets-container">
-        <p>Include lowercase alphabets(abcdefgh)</p>
-        <div class="option-container">
-          <div class="options">
-            <input
-              class="selector"
-              name="lowerCaseAlphabets"
-              type="radio"
-              id="lowerCaseAlphabetY"
-              data-include="true"
-            />
-            <label class="selector-option" for="lowerCaseAlphabetY"> Yes</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector"
-              name="lowerCaseAlphabets"
-              type="radio"
-              id="lowerCaseAlphabetN"
-              data-include="false"
-              checked
-            />
-            <label class="selector-option" for="lowerCaseAlphabetN"> No</label>
+        <div class="lowercase-alphabets-container">
+          <p>Include lowercase alphabets(abcdefgh)</p>
+          <div class="option-container">
+            <div class="options">
+              <input
+                class="selector"
+                name="lowerCaseAlphabets"
+                type="radio"
+                id="lowerCaseAlphabetY"
+                data-include="true"
+              />
+              <label class="selector-option" for="lowerCaseAlphabetY">
+                Yes</label
+              >
+            </div>
+            <div class="options">
+              <input
+                class="selector"
+                name="lowerCaseAlphabets"
+                type="radio"
+                id="lowerCaseAlphabetN"
+                data-include="false"
+                checked
+              />
+              <label class="selector-option" for="lowerCaseAlphabetN">
+                No</label
+              >
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="uppercase-alphabets-container">
-        <p>Include uppercase alphabets(ABCDEFGH)</p>
-        <div class="option-container">
-          <div class="options">
-            <input
-              class="selector"
-              name="upperCaseAlphabets"
-              type="radio"
-              id="upperCaseAlphabetY"
-              data-include="true"
-            />
-            <label class="selector-option" for="upperCaseAlphabetY"> Yes</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector"
-              name="upperCaseAlphabets"
-              type="radio"
-              id="upperCaseAlphabetN"
-              data-include="false"
-              checked
-            />
-            <label class="selector-option" for="upperCaseAlphabetN"> No</label>
+        <div class="uppercase-alphabets-container">
+          <p>Include uppercase alphabets(ABCDEFGH)</p>
+          <div class="option-container">
+            <div class="options">
+              <input
+                class="selector"
+                name="upperCaseAlphabets"
+                type="radio"
+                id="upperCaseAlphabetY"
+                data-include="true"
+              />
+              <label class="selector-option" for="upperCaseAlphabetY">
+                Yes</label
+              >
+            </div>
+            <div class="options">
+              <input
+                class="selector"
+                name="upperCaseAlphabets"
+                type="radio"
+                id="upperCaseAlphabetN"
+                data-include="false"
+                checked
+              />
+              <label class="selector-option" for="upperCaseAlphabetN">
+                No</label
+              >
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="special-container">
-        <p>Include special Chracters (!@#$%^&*())</p>
-        <div class="option-container">
-          <div class="options">
-            <input
-              class="selector"
-              name="special"
-              type="radio"
-              id="specialY"
-              data-include="true"
-            />
-            <label class="selector-option" for="specialY"> Yes</label>
-          </div>
-          <div class="options">
-            <input
-              class="selector"
-              name="special"
-              type="radio"
-              id="specialN"
-              data-include="false"
-              checked
-            />
-            <label class="selector-option" for="specialN"> No</label>
+        <div class="special-container">
+          <p>Include special Chracters (!@#$%^&*())</p>
+          <div class="option-container">
+            <div class="options">
+              <input
+                class="selector"
+                name="special"
+                type="radio"
+                id="specialY"
+                data-include="true"
+              />
+              <label class="selector-option" for="specialY"> Yes</label>
+            </div>
+            <div class="options">
+              <input
+                class="selector"
+                name="special"
+                type="radio"
+                id="specialN"
+                data-include="false"
+                checked
+              />
+              <label class="selector-option" for="specialN"> No</label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <button type="button" class="btn-genrate">Genrate password</button>
-    </main>
+        <button type="button" class="btn-genrate">Genrate password</button>
+      </main>
+    </div>
 
     <script src="./JS/script.js"></script>
   </body>
